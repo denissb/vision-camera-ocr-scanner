@@ -1,6 +1,6 @@
 {
-  "name": "vision-camera-code-scanner-example",
-  "description": "Example app for vision-camera-code-scanner",
+  "name": "vision-camera-ocr-scanner-example",
+  "description": "Example app for vision-camera-ocr-scanner",
   "version": "0.1.2",
   "private": true,
   "scripts": {
