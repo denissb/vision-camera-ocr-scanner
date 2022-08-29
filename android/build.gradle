@@ -7,11 +7,13 @@ buildscript {
 
         dependencies {
             classpath 'com.android.tools.build:gradle:4.2.1'
-        }
+            // noinspection DifferentKotlinGradleVersion
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30"
     }
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 def safeExtGet(prop, fallback) {
     rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
@@ -57,5 +59,6 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
     api project(":react-native-vision-camera")
     implementation "androidx.camera:camera-core:1.1.0-alpha06"
-    implementation 'com.google.mlkit:barcode-scanning:17.0.0'
+    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:18.0.0'
+    implementation 'com.google.mlkit:barcode-scanning:17.0.2'
 }

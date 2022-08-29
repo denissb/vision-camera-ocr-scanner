@@ -1,4 +1,4 @@
-package com.visioncameracodescanner;
+package com.visioncameraocrscanner;
 
 import androidx.annotation.NonNull;
 
@@ -17,6 +17,7 @@ public class VisionCameraCodeScannerPluginPackage implements ReactPackage {
   @Override
   public List<NativeModule> createNativeModules(@NonNull @org.jetbrains.annotations.NotNull ReactApplicationContext reactContext) {
     FrameProcessorPlugin.register(new VisionCameraCodeScannerPlugin());
+    FrameProcessorPlugin.register(OCRFrameProcessorPlugin());
     return Collections.emptyList();
   }
 

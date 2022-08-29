@@ -290,6 +290,57 @@ export interface CodeScannerOptions {
   checkInverted?: boolean;
 }
 
+type BoundingFrame = {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  boundingCenterX: number;
+  boundingCenterY: number;
+};
+
+type TextElement = {
+  text: string;
+  frame: BoundingFrame;
+  cornerPoints: Point[];
+};
+
+type TextLine = {
+  text: string;
+  elements: TextElement[];
+  frame: BoundingFrame;
+  recognizedLanguages: string[];
+  cornerPoints: Point[];
+};
+
+type TextBlock = {
+  text: string;
+  lines: TextLine[];
+  frame: BoundingFrame;
+  recognizedLanguages: string[];
+  cornerPoints: Point[];
+};
+
+type Text = {
+  text: string;
+  blocks: TextBlock[];
+};
+
+export type OCRFrame = {
+  result: Text;
+};
+
+/**
+ * Scans OCR.
+ */
+
+export function scanOCR(frame: Frame): OCRFrame {
+  'worklet';
+  // @ts-ignore
+  // eslint-disable-next-line no-undef
+  return __scanOCR(frame);
+}
+
 /**
  * Scans barcodes in the passed frame with MLKit
  *
@@ -308,4 +359,5 @@ export function scanBarcodes(
   return __scanCodes(frame, types, options);
 }
 
-export * from './hook';
+export * from './useScanBarcodes';
+export * from './useScanOCR';
