@@ -1,15 +1,16 @@
 buildscript {
-    if (project == rootProject) {
         repositories {
             google()
             jcenter()
         }
 
         dependencies {
-            classpath 'com.android.tools.build:gradle:4.2.1'
+            if (project == rootProject) {
+              classpath 'com.android.tools.build:gradle:4.2.1'
+            }
             // noinspection DifferentKotlinGradleVersion
             classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30"
-    }
+        }
 }
 
 apply plugin: 'com.android.library'
@@ -57,8 +58,9 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.30"
     api project(":react-native-vision-camera")
-    implementation "androidx.camera:camera-core:1.1.0-alpha06"
-    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:18.0.0'
-    implementation 'com.google.mlkit:barcode-scanning:17.0.2'
+    implementation "androidx.camera:camera-core:1.1.0-alpha08"
+    implementation "com.google.android.gms:play-services-mlkit-text-recognition:18.0.0"
+    implementation "com.google.mlkit:barcode-scanning:17.0.2"
 }

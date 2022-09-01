@@ -496,7 +496,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - RNReanimated (from `../node_modules/react-native-reanimated`)
+  - RNReanimated (from `../../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - vision-camera-ocr-scanner (from `../..`)
   - VisionCamera (from `../node_modules/react-native-vision-camera`)
@@ -593,7 +593,7 @@ EXTERNAL SOURCES:
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
   RNReanimated:
-    :path: "../node_modules/react-native-reanimated"
+    :path: "../../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
   vision-camera-ocr-scanner:
@@ -660,7 +660,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: 50cfe7049167cfc7e83ac5542c6fff0c76791a9b
   React-runtimeexecutor: bbbdb3d8fcf327c6e2249ee71b6ef1764b7dc266
   ReactCommon: 9bac022ab71596f2b0fde1268272543184c63971
-  RNReanimated: e8afbe2a9e08e9e778ea72ddb1a8533445812621
+  RNReanimated: f1b73ebfdd510dc56b8970bf19444cb0d5acd35a
   RNScreens: 01ab149b5dd5c27f5ff26741b1d2bdf2cee1af35
   vision-camera-ocr-scanner: 96d44e461e3430dfb981bf171924aaccb3c56bf3
   VisionCamera: dcbcdf02e8a6ea3c03bf741a962701fe81f0950e
