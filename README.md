@@ -1,6 +1,8 @@
 # vision-camera-ocr-scanner
 
-VisionCamera Frame Processor Plugin to read barcodes and Text using MLKit Vision Barcode Scanning
+VisionCamera Frame Processor Plugin to read barcodes and Text using MLKit Vision Barcode Scanning.
+
+Currently only tested on **Android**
 
 This is a combination of [vision-camera-ocr](https://github.com/aarongrider/vision-camera-ocr) and [vision-camera-ocr-scanner](https://github.com/rodgomesc/vision-camera-code-scanner) in one package. Kudos to the original authors!
 
@@ -62,7 +64,7 @@ export default function App() {
   //   }
   // }, [ocrData]);
 
-  // Alternatively you can use the underlying function:
+  // Alternatively you can use the underlying functions to do both actions in once OCR processor:
   //
   // const frameProcessor = useFrameProcessor((frame) => {
   //   'worklet';
